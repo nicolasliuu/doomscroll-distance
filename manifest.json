@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "DoomscrollDistance",
+    "version": "1.0",
+    "description": "Tracks your scroll distance on each website and provides aggregate data.",
+    "permissions": [
+      "storage",
+      "activeTab",
+      "scripting"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+          "matches": ["http://*/*", "https://*/*"],
+          "js": ["content.js"]
+        }
+    ],
+    "action": {
+      "default_popup": "popup/popup.html"
+    },
+    "host_permissions": [
+        "http://*/*", 
+        "https://*/*"
+    ]
+  }
+  

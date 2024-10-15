@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DoomscrollDistance</title>
+  <!-- Google Fonts for Friendly Typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>DoomscrollDistance</h1>
+    </header>
+    <main>
+      <!-- Total Scroll Card -->
+      <div class="card" id="total-scroll-card">
+        <h2>Total Scrolled</h2>
+        <p id="total-value">0 px / 0 in / 0 ft / 0 m / 0 mi / 0 screenfuls</p>
+        <div id="progress-container">
+          <div id="progress-bar"></div>
+        </div>
+        <div id="fun-fact">Start scrolling to see fun facts!</div>
+        <button id="reset-total" class="btn">Reset</button>
+      </div>
+
+      <!-- Scroll by Site Card -->
+      <div class="card" id="site-scroll-card">
+        <h2>Scroll by Site</h2>
+        <ul id="site-list">
+          <!-- Dynamically populated -->
+        </ul>
+        <button id="reset-sites" class="btn">Reset Sites</button>
+      </div>
+
+      <!-- Export/Import Card -->
+      <div class="card" id="export-import-card">
+        <h2>Data Management</h2>
+        <button id="export-data" class="btn">Export Data</button>
+        <button id="import-data" class="btn">Import Data</button>
+        <input type="file" id="import-file" accept=".json" style="display:none;">
+      </div>
+    </main>
+  </div>
+
+  <!-- Popup JS Script -->
+  <script src="popup.js"></script>
+</body>
+</html>
